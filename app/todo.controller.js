@@ -1,6 +1,6 @@
-(function() {
+(function () {
   'use strict';
- 
+
   angular
     .module('toDoList')
     .controller('ToDoController', ToDoController);
@@ -13,40 +13,27 @@
     var vm = this;
     vm.toDoItem = "";
     vm.toDoList = [];
-    vm.toDoObject = [];
+    vm.toDoObject = {};
     vm.sort = 'value';
-    vm.reverse = false;
+    vm.title = 'ToDoFactory';
+    vm.added = new Date();
 
-    vm.addItem = function(toDoObject) {
-
+    vm.addItem = function (toDoObject) {
+      toDoObject.DateAdded = vm.added;
       ToDoFactory
-        .storedata(toDoObject)
-
-      vm.toDoList.push({
-        toDo: vm.toDoObject.toDoItem,
-        priority: vm.toDoObject.priorities
-      });
+        .storeData(toDoObject).then(function (response) {
+          console.log(response);
+          pushTodo(response.data);
+        }, function (error) {
+          console.log(error);
+        })
     }
 
-    vm.prior = function(priorities) {
-      {
-        var priorities = vm.toDoObject.priorities
-        console.log(priorities);
-        var swapped;
-        do {
-          swapped=false;
-          for(var i=0; i<priorities.length-1; i++) {
-            if (a[i] > a[i+1]) {
-              var temp = a[i];
-              a[i] = a[i+1];
-              a[i+1] = temp;
-              swapped = true;
-            }
-          }
-        } while (swapped);
-      }
-vm.prior(priorities);
-console.log(priorities);
+    function pushTodo(todo) {
+      vm.toDoList.push({
+        toDo: vm.toDoObject.Activity,
+        priority: vm.toDoObject.Priority
+      });
     }
   }
 })();

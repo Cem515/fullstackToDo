@@ -136,3 +136,6 @@ C:\Users\Collin\Projects\FullStackToDo\VSTDA.API\VSTDA.API\obj\Debug\VSTDA.API.d
 C:\Users\Collin\Projects\FullStackToDo\VSTDA.API\VSTDA.API\obj\Debug\VSTDA.API.pdb
 C:\Users\Collin\Projects\FullStackToDo\VSTDA.API\VSTDA.API\obj\Debug\VSTDA.API.Migrations.InitialCreate.resources
 C:\Users\Collin\Projects\FullStackToDo\VSTDA.API\VSTDA.API\obj\Debug\VSTDA.API.csproj.GenerateResource.Cache
+C:\Users\Collin\Projects\FullStackToDo\VSTDA.API\VSTDA.API\bin\System.Web.Cors.dll
+C:\Users\Collin\Projects\FullStackToDo\VSTDA.API\VSTDA.API\bin\System.Web.Http.Cors.dll
+C:\Users\Collin\Projects\FullStackToDo\VSTDA.API\VSTDA.API\bin\System.Web.Http.Cors.xml

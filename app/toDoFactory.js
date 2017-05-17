@@ -1,8 +1,8 @@
-(function(){
+(function () {
     'use strict';
 
     angular
-        .module('app')
+        .module('toDoList')
         .factory('ToDoFactory', ToDoFactory)
 
     ToDoFactory.$inject = ['$http'];
@@ -16,14 +16,18 @@
 
         function storeData(object) {
 
-            $http ({
-                method: 'POST', 
-                url: 'http://localhost:60082/api/Todo',
-                params: {
-                    Activity:vm.toDoObject.toDoItem,
-                    Priority: vm.toDoObject.priorities
+            return $http({
+                method: 'POST',
+                url: 'http://localhost:60082/api/todoes',
+                data: object,
+                headers: {
+                    'Content-Type': 'application/json; charset=utf-8'
                 }
-            })
-         }
+            }).then(function successCallback(response) {
+                    return response;
+            }, function errorCallback(error) {
+                    return error;
+            });
+        }
     }
 })();

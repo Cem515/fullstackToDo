@@ -22,10 +22,10 @@
 
 <body ng-controller="ToDoController as vm">
 <!-- Input To Do Item -->
-  <input type="text" class="form-control" placeholder="To Do List Item" ng-model="vm.toDoObject.toDoItem">
+  <input type="text" class="form-control" placeholder="To Do List Item" ng-model="vm.toDoObject.Activity">
 
 <!-- Priority Selection -->
-  <select class="form-control" ng-model="vm.toDoObject.priorities" placeholder="Priority Level">
+  <select class="form-control" ng-model="vm.toDoObject.Priority" placeholder="Priority Level">
     <option value="1">High Priority</option>
     <option value="2">Medium Priority</option>
     <option value="3">Low Priority</option>
@@ -40,7 +40,7 @@
 
 <!-- To Do List  -->
   <ul class="list">To Do:
-    <li class ="list" ng-bind="::vm.toDoObject.toDoItem" ng-repeat="toDo in vm.toDoList | orderBy:sortField" ng-class="::{'high':vm.toDoObject.priorities ==1, 'medium':vm.toDoObject.priorities ==2, 'low':vm.toDoObject.priorities ==3}">
+    <li class ="list" ng-bind="::vm.toDoObject.Activity" ng-repeat="toDo in vm.toDoList | orderBy:sortField" ng-class="::{'high':vm.toDoObject.Priority ==1, 'medium':vm.toDoObject.Priority ==2, 'low':vm.toDoObject.Priority ==3}">
     </li>
 
   </ul>
@@ -52,6 +52,7 @@
   <!-- inject:js -->
   <script src="/app/app.js"></script>
   <script src="/app/todo.controller.js"></script>
+  <script src="/app/toDoFactory.js"></script>
   <!-- endinject -->
 </body>
 

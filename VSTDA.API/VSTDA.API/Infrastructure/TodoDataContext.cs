@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Web;
-
+﻿using System.Data.Entity;
+using VSTDA.API.Models;
 
 namespace VSTDA.API.Infrastructure
 {
@@ -14,8 +10,6 @@ namespace VSTDA.API.Infrastructure
 
             }
 
-        public IDbSet<Models.Todo> Activities { get; set; }
-
-        public System.Data.Entity.DbSet<VSTDA.API.Models.Todo> Todoes { get; set; }
+        public DbSet<Todo> Todoes { get; set; }
     }
 }
