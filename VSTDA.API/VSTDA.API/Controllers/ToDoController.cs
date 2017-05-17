@@ -13,14 +13,17 @@ namespace VSTDA.API.Controllers
         // GET: api/ToDoList
         public IEnumerable<Todo> Get()
         {
-
+            return new Todo[]
+            {
+               new Todo{ Activity = "Working", Priority = 2 }
+            };
         }
 
         // GET: api/ToDoList/5
         public Todo Get(int id)
         {
-
-    }
+            return new Todo { Activity = "Show Up", Priority = 3 };
+        }
 
         // POST: api/ToDoList
         public Todo Post(Todo todo)
@@ -38,4 +41,4 @@ namespace VSTDA.API.Controllers
         {
         }
     }
-}
+};

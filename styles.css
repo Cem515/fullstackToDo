@@ -1,0 +1,17 @@
+.high {
+   background-color: #F08080;
+}
+
+.medium {
+   background-color: yellow;
+}
+
+.low {
+   background-color: #00FF00;
+}
+
+.list {
+  font-family: 'Gochi Hand', cursive;
+  font-size: 30px;
+
+}
