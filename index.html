@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="shortcut icon" href="">
-    <link href="https://fonts.googleapis.com/css?family=Gochi+Hand" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gochi+Hand" rel="stylesheet">
   <!-- bower:css -->
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
   <!-- endbower -->
@@ -21,26 +21,26 @@
 </head>
 
 <body ng-controller="ToDoController as vm">
-<!-- Input To Do Item -->
+  <!-- Input To Do Item -->
   <input type="text" class="form-control" placeholder="To Do List Item" ng-model="vm.toDoObject.Activity">
 
-<!-- Priority Selection -->
+  <!-- Priority Selection -->
   <select class="form-control" ng-model="vm.toDoObject.Priority" placeholder="Priority Level">
     <option value="1">High Priority</option>
     <option value="2">Medium Priority</option>
     <option value="3">Low Priority</option>
   </select>
 
-<!-- Add/Sort Buttons -->
-  <button type="button"  class="btn btn-default btn-lg btn-block" ng-click="vm.addItem(vm.toDoObject)">Add Item</button>
+  <!-- Add/Sort Buttons -->
+  <button type="button" class="btn btn-default btn-lg btn-block" ng-click="vm.addItem(vm.toDoObject)">Add Item</button>
   <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="sortField = 'toDo'">Sort Alphabetically (A-Z)</button>
-    <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="sortField = '-toDo'">Sort Alphabetically (Z-A)</button>
+  <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="sortField = '-toDo'">Sort Alphabetically (Z-A)</button>
   <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="sortField = 'priority'">Sort by Priority</button>
- 
 
-<!-- To Do List  -->
+
+  <!-- To Do List  -->
   <ul class="list">To Do:
-    <li class ="list" ng-bind="::vm.toDoObject.Activity" ng-repeat="toDo in vm.toDoList | orderBy:sortField" ng-class="::{'high':vm.toDoObject.Priority ==1, 'medium':vm.toDoObject.Priority ==2, 'low':vm.toDoObject.Priority ==3}">
+    <li class="list" ng-bind="::vm.toDoObject.Activity" ng-repeat="toDo in vm.toDoList | orderBy:sortField" ng-class="::{'high':vm.toDoObject.Priority ==1, 'medium':vm.toDoObject.Priority ==2, 'low':vm.toDoObject.Priority ==3}">
     </li>
 
   </ul>
@@ -52,7 +52,7 @@
   <!-- inject:js -->
   <script src="/app/app.js"></script>
   <script src="/app/todo.controller.js"></script>
-  <script src="/app/toDoFactory.js"></script>
+  <script src="/app/todo.Factory.js"></script>
   <!-- endinject -->
 </body>
 
